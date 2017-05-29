@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 	<title></title>
     <!-- Area de enlaces css -->
 	<link rel="stylesheet" href="assets/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
 </head>
 <body>
     <section class="container">
@@ -16,13 +21,17 @@
                 <p>" Publish anything ", Just in you browser</p>
             </div>
         </div>
+    </section> 
+    
+    <!-- Area de mapa-->
+    
+    <section class="container">
+        <div class="row">
+            <div class="col s12 mapa"></div>
+        </div>
     </section>
-    
-    
-    <div id="mapa">
-
-    </div>
-    
+   <!-- fin de Area de mapa-->
+     
     
     <!-- Area de F.A.B fixed action button -->
     <div class="fixed-action-btn horizontal">
@@ -31,13 +40,49 @@
         </a>
         <ul>
             <li><a class="btn-floating red"><i class="material-icons">message</i></a></li><!-- Si el atributo href no está presente, la etiqueta <a> no es un hipervínculo.-->
-            <li><a class="btn-floating yellow darken-1" href="#modal"><i class="material-icons">perm_media</i></a></li>
+            <li><a class="btn-floating yellow darken-1  " href="#modalTexto"><i class="material-icons">perm_media</i></a></li>
             <li><a class="btn-floating green"><i class="material-icons">today</i></a></li>
             <li><a class="btn-floating blue"><i class="material-icons">video_library</i></a></li>
         </ul>
     </div>
+   
+    
     <!-- Fin area F.A.B fixed action button -->
-        
+    
+    <!--Area de modal de texto -->
+    <section id="modalTexto" class="modal ">
+        <section class=" modal-content container ">
+            <div class="row ">
+                <form class="col s12 ">
+                    <section class="row">
+                        <div class="input-field col s12">
+                            <input  type="text" class="validate" placeholder="titulo">
+                            <label for="icon_prefix">Titulo</label>
+                        </div>
+                    </section>
+                    <section class="row">
+                        <div class="input-field col s12">
+                            <input  type="tel" class="validate" placeholder="mensaje">
+                            <label for="icon_telephone">Mensaje</label>
+                        </div>
+                    </section>
+                    <section class="row">
+                        <div class="col s12">
+                            <button data-target="modal1" class="btn right">Publicar <i class="material-icons" >trending_flat</i></button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </section>
+    </section>
+    
+    
+    
+    
+    
+    
+          
+    
     
     <!-- Area de enlaces de js por orden -->
     <script src="assets/js/jquery.js"></script>

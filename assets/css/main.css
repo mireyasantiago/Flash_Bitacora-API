@@ -2,3 +2,9 @@
         width: 400px;
         height: 400px;
       }
+.tamaño__formulario {
+    width: 200px;
+    height: 200px;
+    border: solid 2px;
+    border-color: black;
+}
