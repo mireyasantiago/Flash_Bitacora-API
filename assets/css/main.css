@@ -2,3 +2,6 @@
         width: 400px;
         height: 400px;
       }
+.centrar__mapa{
+    align-content: center;
+}
