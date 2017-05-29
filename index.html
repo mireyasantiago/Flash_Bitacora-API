@@ -27,7 +27,9 @@
     
     <section class="container">
         <div class="row">
-            <div class="col s12 mapa"></div>
+            <div class="col s12 " id="mapa">
+                
+            </div>
         </div>
     </section>
    <!-- fin de Area de mapa-->
@@ -39,10 +41,9 @@
             <i class="large material-icons">mode_edit</i>
         </a>
         <ul>
-            <li><a class="btn-floating red"><i class="material-icons">message</i></a></li><!-- Si el atributo href no está presente, la etiqueta <a> no es un hipervínculo.-->
-            <li><a class="btn-floating yellow darken-1  " href="#modalTexto"><i class="material-icons">perm_media</i></a></li>
-            <li><a class="btn-floating green"><i class="material-icons">today</i></a></li>
-            <li><a class="btn-floating blue"><i class="material-icons">video_library</i></a></li>
+            <li><a class="btn-floating red" href="#modalTexto"><i class="material-icons">message</i></a></li><!-- Si el atributo href no está presente, la etiqueta <a> no es un hipervínculo.-->
+            <li><a class="btn-floating yellow darken-1  " href="#modalImagen"><i class="material-icons">perm_media</i></a></li>
+            <li><a class="btn-floating green" href="#modalCalendario"><i class="material-icons">today</i></a></li>
         </ul>
     </div>
    
@@ -68,7 +69,7 @@
                     </section>
                     <section class="row">
                         <div class="col s12">
-                            <button data-target="modal1" class="btn right">Publicar <i class="material-icons" >trending_flat</i></button>
+                            <button data-target="modal1" class="btn right">Publicar <i class="material-icons" >send</i></button>
                         </div>
                     </section>
                 </form>
@@ -76,13 +77,61 @@
         </section>
     </section>
     
+    <!-- area de modal imagen  -->
     
+    <div id="modalImagen" class="modal">
+        <div class="modal-content container">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="imagen-titulo" type="text" class="validate" data-length="10" />
+                    <label for="imagen-titulo"> Título </label>
+                </div>
+                <div class="row">
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>Imagen</span>
+                            <input type="file" accept="image/*" id="imagen">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Seleccionar archivo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light right " type="submit" name="action" data-publication="imagen">
+                        Publicar <i class="material-icons right">send</i>
+                        </button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <!-- area de modal agregar evento  -->
     
-    
-    
-          
-    
+    <div id="modalCalendario" class="modal blue-grey">
+        <div class="modal-content container ">
+            <div class="row">
+                <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="input_text" type="text" data-length="10">
+                        <label for="evento-titulo">Título de tu evento</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 ">
+                        <input type="date" class="datepicker" placeholder="¿En que fecha se realizara tu evento ?">
+                        <button class="btn waves-effect waves-light right " type="submit" name="action" data-publication="evento">
+                        Publicar <i class="material-icons right">send</i>
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Area de enlaces de js por orden -->
     <script src="assets/js/jquery.js"></script>
